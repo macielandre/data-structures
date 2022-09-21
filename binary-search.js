@@ -19,7 +19,7 @@ function binarySearch(array, left, right, id) {
     }
 
     if(right >= left) {
-        const index = parseInt(left + (right - left)/2)
+        const index = parseInt((left + right)/2)
         const presentId = array[index].id
 
         if(presentId === id) {
@@ -61,5 +61,5 @@ const array = [
 ]
 
 console.time('binary search')
-console.log(binarySearch(array, 0, array.length - 1, 34))
+console.log(binarySearch(array, 0, array.length - 1, 33))
 console.timeEnd('binary search')
